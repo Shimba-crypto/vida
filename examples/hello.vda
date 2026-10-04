@@ -1,0 +1,39 @@
+// hello.vda — first vida program!
+let name = "vida"
+print("hello " + name + "!")
+
+// arithmetic
+let x = 42
+let y = 8
+print(x + y)
+print(x * y)
+print(x % y)
+
+// booleans & logic
+print(true and false)
+print(true or false)
+print(not false)
+
+// if/else
+if x > 10 {
+    print("x is big!")
+} else {
+    print("x is small")
+}
+
+// while loop
+let i = 0
+while i < 5 {
+    print(i)
+    i = i + 1
+}
+
+// nested scopes
+{
+    let inner = 99
+    print(inner)
+}
+
+// floats
+let pi = 3.14
+print(pi * 2.0)

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="vda icon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#221D4D"/>
+      <stop offset="0.55" stop-color="#161238"/>
+      <stop offset="1" stop-color="#0D0B24"/>
+    </linearGradient>
+    <linearGradient id="volt" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D8B4FE"/>
+      <stop offset="0.55" stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#C4B5FD" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#C4B5FD" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="topglow" cx="0.5" cy="0" r="1">
+      <stop offset="0" stop-color="#B7A6FF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#B7A6FF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="36" height="36" patternUnits="userSpaceOnUse">
+      <circle cx="18" cy="18" r="2.6" fill="#D6C9FF"/>
+    </pattern>
+    <clipPath id="tile">
+      <rect x="16" y="16" width="480" height="480" rx="112"/>
+    </clipPath>
+  </defs>
+
+  <!-- tile -->
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bg)"/>
+  <g clip-path="url(#tile)">
+    <rect x="16" y="16" width="480" height="480" fill="url(#dots)" opacity="0.10"/>
+    <rect x="16" y="16" width="480" height="300" fill="url(#topglow)"/>
+    <!-- faint ascending bars: compute -->
+    <g fill="#8B5CF6" opacity="0.10">
+      <rect x="72" y="340" width="22" height="70" rx="11"/>
+      <rect x="104" y="308" width="22" height="102" rx="11"/>
+      <rect x="386" y="322" width="22" height="88" rx="11"/>
+      <rect x="418" y="352" width="22" height="58" rx="11"/>
+    </g>
+  </g>
+  <rect x="17.5" y="17.5" width="477" height="477" rx="110.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.09" stroke-width="3"/>
+
+  <!-- the V: a voltage trace -->
+  <path d="M 150 168 L 256 344 L 362 168"
+        fill="none" stroke="url(#volt)" stroke-width="76"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- apex compute node -->
+  <circle cx="256" cy="344" r="58" fill="url(#halo)"/>
+  <circle cx="256" cy="344" r="27" fill="#140F2E" stroke="url(#volt)" stroke-width="9"/>
+  <circle cx="256" cy="344" r="8.5" fill="#F5F3FF"/>
+
+  <!-- terminal block cursor -->
+  <rect x="312" y="392" width="58" height="22" rx="11" fill="#A78BFA" opacity="0.92"/>
+</svg>
